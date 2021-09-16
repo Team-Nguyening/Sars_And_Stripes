@@ -47,5 +47,6 @@
     <string name="weekly">Weekly</string>
     <string name="toggle_weekly">Toggle weekly</string>
 
+    <string name="doctors_visit">Enter doctors name</string>
 
 </resources>
