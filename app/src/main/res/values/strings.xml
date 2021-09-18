@@ -43,8 +43,10 @@
     <string name="EnterLastName">Last Name:</string>
     <string name="EnterUserName">User Name:</string>
     <string name="SettingsIcon">SettingsIcon</string>
-    <string name="SettingUsersName">User Name:</string>
+    <string name="SettingUsersName">Username:</string>
     <string name="SettingsPassword">Password:</string>
+    <string name="Email">Email:</string>
+    <string name="PolicyNumber">Policy Number:</string>
 
     <string name="title_activity_locations">Locations</string>
     <string name="locations"><u>Locations</u></string>
