@@ -25,12 +25,12 @@ public class Profile extends AppCompatActivity {
 
         //REFERENCE ALL TEXTVIEWS ON THE PAGE THAT WILL BE UPDATED TO DISPLAY USER PROFILE INFO
         MyDBHandler myDBHandler = new MyDBHandler(Profile.this);
-        userNameProfile = (TextView) findViewById(R.id.userNameProfile);
-        firstNameProfile = (TextView) findViewById(R.id.firstNameProfile);
-        lastNameProfile = (TextView)  findViewById(R.id.lastNameProfile);
-        addressProfile = (TextView) findViewById(R.id.addressProfile);
-        phoneProfile = (TextView)  findViewById(R.id.phoneProfile);
-        emailProfile = (TextView) findViewById(R.id.emailProfile);
+        userNameProfile = findViewById(R.id.userNameProfile);
+        firstNameProfile = findViewById(R.id.firstNameProfile);
+        lastNameProfile = findViewById(R.id.lastNameProfile);
+        addressProfile = findViewById(R.id.addressProfile);
+        phoneProfile = findViewById(R.id.phoneProfile);
+        emailProfile = findViewById(R.id.emailProfile);
         //buttonChangePassword = (Button) findViewById(R.id.buttonChangePassword);  <<---- DELETE
         //buttonDelete = (Button) findViewById(R.id.buttonDelete);                  <<---- DELETE
 
@@ -48,7 +48,7 @@ public class Profile extends AppCompatActivity {
         }
 
         //CREATE ON CLICK FOR CHANGE PASSWORD BUTTON
-        buttonChangePassword = (Button) findViewById(R.id.buttonChangePassword);
+        buttonChangePassword = findViewById(R.id.buttonChangePassword);
         buttonChangePassword.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //need to create the change password page
@@ -56,7 +56,7 @@ public class Profile extends AppCompatActivity {
             }
         }); //END OF CHANGE PASSWORD ONCLICK
 
-        buttonDelete = (Button) findViewById(R.id.buttonDelete);
+        buttonDelete = findViewById(R.id.buttonDelete);
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //work on delet3e function within database and here!!!
