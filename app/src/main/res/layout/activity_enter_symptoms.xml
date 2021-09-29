@@ -172,6 +172,15 @@
                 android:text="@string/covid_symptoms13"
                 android:textColor="#FBFBFB" />
 
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:inputType="textMultiLine" />
+
             <CheckBox
                 android:id="@+id/checkbox_fifteen"
                 android:layout_width="wrap_content"
@@ -179,12 +188,22 @@
                 android:text="@string/covid_symptoms14"
                 android:textColor="@color/white" />
 
+            <EditText
+                android:id="@+id/editTextTextMultiLine2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:inputType="textMultiLine" />
+
             <Button
                 android:layout_gravity="center"
                 android:id="@+id/check_Results"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Check_results" />
+                android:text="@string/Check_results"
+                />
 
         </LinearLayout>
 
