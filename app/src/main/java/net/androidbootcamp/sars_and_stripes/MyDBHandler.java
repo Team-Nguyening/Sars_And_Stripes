@@ -118,6 +118,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     }
 
     // -------------- GET SELECTED FIELDS FOR PROFILE PAGE ----------------
+    //GET FIRST NAME FROM DATABASE
     public String getFName(String userName){
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -131,8 +132,66 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return firstName;
     }
 
-    // UPDATE & DELETE USER FROM 'PROFILE' PAGE TO DATABASE -- removed settings page --
-    // integrate buttons in profile page instead
+    //GET LAST NAME FROM DATABASE
+    public String getLName(String userName){
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String mQuery ="SELECT " + COLUMN_LAST_NAME + " FROM " + USERINFO_TABLE + " WHERE " + COLUMN_USER_NAME
+                + " = " + "'" + userName + "'";
+
+        Cursor cursor = db.rawQuery(mQuery, null);
+        cursor.moveToFirst();
+        String lastName = cursor.getString(0);
+
+        return lastName;
+    }
+
+    //GET ADDRESS FROM DATABASE
+    public String getAddress(String userName){
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String mQuery ="SELECT " + COLUMN_ADDRESS + " FROM " + USERINFO_TABLE + " WHERE " + COLUMN_USER_NAME
+                + " = " + "'" + userName + "'";
+
+        Cursor cursor = db.rawQuery(mQuery, null);
+        cursor.moveToFirst();
+        String address = cursor.getString(0);
+
+        return address;
+    }
+
+    //GET PHONE NUMBER FROM DATABASE
+    public String getPhone(String userName){
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String mQuery ="SELECT " + COLUMN_PHONE_NUMBER + " FROM " + USERINFO_TABLE + " WHERE " + COLUMN_USER_NAME
+                + " = " + "'" + userName + "'";
+
+        Cursor cursor = db.rawQuery(mQuery, null);
+        cursor.moveToFirst();
+        String phone = cursor.getString(0);
+
+        return phone;
+    }
+
+    //GET EMAIL ADDRESS FROM DATABASE
+    public String getEmail(String userName){
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        String mQuery ="SELECT " + COLUMN_USER_EMAIL + " FROM " + USERINFO_TABLE + " WHERE " + COLUMN_USER_NAME
+                + " = " + "'" + userName + "'";
+
+        Cursor cursor = db.rawQuery(mQuery, null);
+        cursor.moveToFirst();
+        String email = cursor.getString(0);
+
+        return email;
+    }
+
+    //DELETE USER PROFILE FROM DATABASE ------ BELOW THIS LINE ------
+
+
+    //UPDATE USER PASSWORD WITHIN DATABASE ------ BELOW THIS LINE ------
 
 
 

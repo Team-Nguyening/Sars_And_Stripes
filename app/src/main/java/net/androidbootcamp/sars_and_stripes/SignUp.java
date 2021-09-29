@@ -111,8 +111,7 @@ public class SignUp extends AppCompatActivity {
                         try {
                             userInfo = new UserInfo(-1, userName, password, firstName, lastName, address, phoneNumber, eMail);
                             Toast.makeText(getApplicationContext(), "Account Successfully Created ", Toast.LENGTH_LONG).show();
-                            Profile mProfile = new Profile(); // create new profile if they are able to login
-                            mProfile.setUserName(userName); //pass the username to the new profile display
+                            Profile.setUserName(userName); //pass the username to the new profile display
                             startActivity(new Intent(SignUp.this, Home.class));     //take user to homeUI
                         }
                         catch (Exception e) {
