@@ -27,8 +27,6 @@
         android:backgroundTint="@color/white"
         android:ems="10"
         android:foregroundTint="@color/design_default_color_background"
-        android:hapticFeedbackEnabled="false"
-        android:hint="@string/doctors_visit"
         android:inputType="text"
         android:textColor="@color/white"
         android:textSize="20sp"

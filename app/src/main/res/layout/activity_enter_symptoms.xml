@@ -46,264 +46,149 @@
         app:layout_constraintTop_toBottomOf="@+id/topLogo9"
         app:srcCompat="@drawable/feeling_sick_icon" />
 
+
     <ScrollView
         android:id="@+id/scrollView4"
-        android:layout_width="409dp"
-        android:layout_height="0dp"
+        android:layout_width="385dp"
+        android:layout_height="323dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="34dp"
         app:layout_constraintBottom_toTopOf="@+id/team9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <TableRow
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView16"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="wrap_content"
+                android:text="Check all boxes that are a 'Yes' :"
+                android:textAlignment="center"
+                android:textColor="#F4F4F4"
+                android:textSize="20sp" />
 
-                <Switch
-                    android:id="@+id/switch12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch"
-                    android:textColor="#FFFFFFFF" />
+            <CheckBox
+                android:id="@+id/checkbox_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:textColor="#FFFFFFFF" />
-            </TableRow>
+                android:text="@string/covid_symptoms"
+                android:textColor="#F6F0F0" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+            <CheckBox
+                android:id="@+id/checkbox_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms2"
+                android:textColor="#F8F6F6" />
 
-                <Switch
-                    android:id="@+id/switch13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
+            <CheckBox
+                android:id="@+id/checkbox_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms15"
+                android:textColor="#F6F5F5" />
 
-                <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:textColor="#FFFFFFFF" />
-            </TableRow>
+            <CheckBox
+                android:id="@+id/checkbox_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms3"
+                android:textColor="#FAF7F7" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+            <CheckBox
+                android:id="@+id/checkbox_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms4"
+                android:textColor="#FAF9F9" />
 
-                <Switch
-                    android:id="@+id/switch14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
+            <CheckBox
+                android:id="@+id/checkbox_six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms5"
+                android:textColor="@color/white" />
 
-                <TextView
-                    android:id="@+id/textView21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:textColor="#FFFFFFFF" />
-            </TableRow>
+            <CheckBox
+                android:id="@+id/checkbox_seven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms6"
+                android:textColor="#FDFCFC" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+            <CheckBox
+                android:id="@+id/checkbox_eight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms7"
+                android:textColor="@color/white" />
 
-                <Switch
-                    android:id="@+id/switch15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
+            <CheckBox
+                android:id="@+id/checkbox_nine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms8"
+                android:textColor="@color/white" />
 
-                <TextView
-                    android:id="@+id/textView22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
+            <CheckBox
+                android:id="@+id/checkbox_ten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms9"
+                android:textColor="@color/white" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+            <CheckBox
+                android:id="@+id/checkbox_eleven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms10"
+                android:textColor="@color/white" />
 
-                <Switch
-                    android:id="@+id/switch16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
+            <CheckBox
+                android:id="@+id/checkbox_twelve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms11"
+                android:textColor="@color/white" />
 
-                <TextView
-                    android:id="@+id/textView23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
+            <CheckBox
+                android:id="@+id/checkbox_thirteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms12"
+                android:textColor="@color/white" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+            <CheckBox
+                android:id="@+id/checkbox_fourteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms13"
+                android:textColor="#FBFBFB" />
 
-                <Switch
-                    android:id="@+id/switch17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
+            <CheckBox
+                android:id="@+id/checkbox_fifteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/covid_symptoms14"
+                android:textColor="@color/white" />
 
-                <TextView
-                    android:id="@+id/textView24"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/check_Results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Check_results" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+        </LinearLayout>
 
-                <Switch
-                    android:id="@+id/switch18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
 
-                <TextView
-                    android:id="@+id/textView25"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <Switch
-                    android:id="@+id/switch19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
-
-                <TextView
-                    android:id="@+id/textView26"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <Switch
-                    android:id="@+id/switch20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
-
-                <TextView
-                    android:id="@+id/textView27"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Switch
-                    android:id="@+id/switch8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="283dp"
-                    android:layout_height="27dp"
-                    android:text="TextView" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Switch
-                    android:id="@+id/switch7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <Switch
-                    android:id="@+id/switch9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Switch
-                    android:id="@+id/switch10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <Switch
-                    android:id="@+id/switch11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Switch" />
-
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-
-            </TableRow>
-
-        </TableLayout>
     </ScrollView>
 
 
