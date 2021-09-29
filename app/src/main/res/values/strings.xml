@@ -68,15 +68,6 @@
     <string name="weekly">Weekly</string>
     <string name="toggle_weekly">Toggle weekly</string>
 
-    <string name="userNameLabel">Username: </string>
-    <string name="firstNameLabel">First Name: </string>
-    <string name="lastNameLabel">Last Name: </string>
-    <string name="emailLabel">Email: </string>
-    <string name="phoneNumberLabel">Phone Number: </string>
-    <string name="addressLabel">Address: </string>
-    <string name="btnChangePassword">Change Password</string>
-    <string name="btnDeleteProfile">Delete Profile</string>
-
     <string name="covid_symptoms">Have you received a Covid-19 vaccine?</string>
     <string name="covid_symptoms2">Do you have a cough?</string>
     <string name="covid_symptoms3">Are you having shortness of breath or any difficulty breathing?</string>
