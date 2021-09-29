@@ -5,13 +5,25 @@ public class UserInfo {
     private String userName;
     private String passWord;
     private String email;
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
+    private String address;
+    Profile profile =  new Profile();
 
     //constructors
-    public UserInfo(int userId, String userName, String passWord, String email) {
+    public UserInfo(int userId, String userName, String passWord, String email, String firstName, String lastName,
+                    String phoneNumber, String address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
         this.userName = userName;
         this.passWord = passWord;
         this.email = email;
         this.userId = userId;
+
+
     }
     public UserInfo() {}
 
@@ -23,6 +35,11 @@ public class UserInfo {
                 ", userName='" + userName + '\'' +
                 ", passWord='" + passWord + '\'' +
                 ", email='" + email + '\'' +
+                ", firstName='" +firstName + '\'' +
+                ", lastName='" +lastName + '\'' +
+                ", phoneNumber='" +phoneNumber + '\'' +
+                ", address='" +address + '\'' +
+
                 '}';
     }
 
@@ -36,8 +53,11 @@ public class UserInfo {
 
     public void setUserName(String userName) {
         this.userName = userName;
+
     }
     public String getUserName() {
+
+        profile.getProfileUsername(userName);
         return this.userName;
     }
 
@@ -54,4 +74,34 @@ public class UserInfo {
     public String getEmail(){
         return this.email;
     }
+
+    public void setFirstName (String firstName){
+        this.firstName = firstName;
+    }
+    public String getFirstName(){
+        return this.firstName;
+    }
+
+    public void setLastName (String lastName){
+        this.lastName = lastName;
+    }
+    public String getLastName(){
+        return this.lastName;
+    }
+
+    public void setPhoneNumber (String phoneNumber){
+        this.phoneNumber = phoneNumber;
+    }
+    public String getPhoneNumber(){
+        return this.phoneNumber;
+    }
+
+    public void setAddress (String address){
+        this.address = address;
+    }
+    public String getAddress(){
+        return this.address;
+    }
+
+
 }

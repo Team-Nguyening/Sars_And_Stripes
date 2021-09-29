@@ -1,5 +1,6 @@
 package net.androidbootcamp.sars_and_stripes;
 
+import android.database.ContentObserver;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -22,10 +23,15 @@ import java.sql.Statement;
 public class MyDBHandler extends SQLiteOpenHelper {
 
     public static final String USERINFO_TABLE = "USERINFO_TABLE";
+    public static final String COLUMN_ID = "ID";
+    public static final String COLUMN_FIRST_NAME = "FIRST_NAME";
+    public static final String COLUMN_LAST_NAME = "LAST_NAME";
+    public static final String COLUMN_PHONE_NUMBER = "PHONE_NUMBER";
+    public static final String COLUMN_ADDRESS = "ADDRESS";
     public static final String COLUMN_USER_NAME = "USER_NAME";
     public static final String COLUMN_USER_PASSWORD = "USER_PASSWORD";
     public static final String COLUMN_USER_EMAIL = "USER_EMAIL";
-    public static final String COLUMN_ID = "ID";
+
 
     // constructor
     public MyDBHandler(@Nullable Context context)
@@ -39,9 +45,11 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db)
     {
         String createTableStatement = "CREATE TABLE " + USERINFO_TABLE +
-                "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_PASSWORD + " TEXT, " + COLUMN_USER_EMAIL + " TEXT)";
+                "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_PASSWORD + " TEXT, " + COLUMN_USER_EMAIL + " TEXT, "
+        + COLUMN_FIRST_NAME + " TEXT, " + COLUMN_LAST_NAME + " TEXT, " + COLUMN_PHONE_NUMBER + " TEXT, " + COLUMN_ADDRESS + " TEXT)";
         //_db.execSQL(LoginDataBaseAdapter.DATABASE_CREATE);
         db.execSQL(createTableStatement);
+
     }
 
     // Called when there is a database version mismatch meaning that the version
@@ -68,6 +76,11 @@ public class MyDBHandler extends SQLiteOpenHelper {
         cv.put(COLUMN_USER_NAME, newUser.getUserName());
         cv.put(COLUMN_USER_PASSWORD, newUser.getPassWord());
         cv.put(COLUMN_USER_EMAIL, newUser.getEmail());
+        cv.put(COLUMN_FIRST_NAME, newUser.getFirstName());
+        cv.put(COLUMN_LAST_NAME, newUser.getLastName());
+        cv.put(COLUMN_PHONE_NUMBER, newUser.getPhoneNumber());
+        cv.put(COLUMN_ADDRESS, newUser.getAddress());
+
 
         long insert = db.insert(USERINFO_TABLE, null, cv);
         if (insert == -1){
@@ -77,7 +90,39 @@ public class MyDBHandler extends SQLiteOpenHelper {
             return true;
         }
     }
+///////added method///////////
+    public String find_firstName (String userData) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String mQuery = "select "  +  COLUMN_FIRST_NAME  + " from " + USERINFO_TABLE + " where " + COLUMN_USER_NAME + " = " + userData;//, new String[]{String.valueOf(userData)});
+        Cursor cursor = db.rawQuery(mQuery, null);
+        cursor.moveToFirst();
+        String firstName = cursor.getString(1);
 
+
+        return firstName;
+    }
+
+        //UserInfo userInfo = null;
+
+
+
+
+
+          //  cursor.moveToFirst();
+
+
+            /*userArray[0] = (cursor.getString(1)); //firstName
+            userArray[1] = (cursor.getString(2)); //lastName
+            userArray[2] = (cursor.getString(3)); //phoneNumber
+            userArray[3] = (cursor.getString(4)); //address
+            userArray[4] = (cursor.getString(5)); //userName
+            userArray[5] = (cursor.getString(7)); //email */
+
+
+           // return userArray;
+       // }
+
+/////////////ends here/////////////
     // SEARCH FROM USERS DATABASE USERNAME & PASSWORD - returns boolean value true (if exists) or false (if does not exist)
     public boolean doesUserExist(String userName, String passWord){
         SQLiteDatabase db = this.getReadableDatabase();

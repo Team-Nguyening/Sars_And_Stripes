@@ -9,11 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 
 public class SignUp extends AppCompatActivity {
     // References to all the buttons on SIGNUP page
     Button btnAcctCreate;
-    EditText textUserName, textPassword, textRePassword, textEmail;
+    EditText textUserName, textPassword, textRePassword, textEmail, textFirstName, textLastName, textAddress, textPhone;
     // define the userAccount
     UserInfo userInfo;
 
@@ -28,7 +30,12 @@ public class SignUp extends AppCompatActivity {
         textPassword = (EditText) findViewById(R.id.textPassword);
         textRePassword = (EditText) findViewById(R.id.textRePassword);
         textEmail = (EditText) findViewById(R.id.textEmail);
+        textFirstName = (EditText) findViewById(R.id.textFirstName);
+        textLastName = (EditText) findViewById(R.id.textLastName);
+        textAddress = (EditText) findViewById(R.id.textAddress);
+        textPhone = (EditText) findViewById(R.id.textPhone);
         btnAcctCreate = (Button) findViewById(R.id.btnAcctCreate);
+
 
         // click listener implemented
         btnAcctCreate.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +45,10 @@ public class SignUp extends AppCompatActivity {
                 String password=textPassword.getText().toString();
                 String confirmPassword=textRePassword.getText().toString();
                 String eMail=textEmail.getText().toString().toLowerCase();
+                String firstName=textFirstName.getText().toString().toLowerCase();
+                String lastName=textLastName.getText().toString().toLowerCase();
+                String address=textAddress.getText().toString().toLowerCase();
+                String phone=textPhone.getText().toString();
 
                 // check if username field is vacant - NOT CASE SENSITIVE
                 if(userName.equals("")) {
@@ -67,7 +78,27 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Email not valid", Toast.LENGTH_LONG).show();
                     return;
                 }
-                // =================================================================================
+
+                if(firstName.equals("")) {
+                    Toast.makeText(getApplicationContext(), "First name field vacant", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if(lastName.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Last name field vacant", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if(address.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Address field vacant", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if(phone.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Phone number field vacant", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
 
                 // reference database to these users' value from SignUp page
                 MyDBHandler myDBHandler = new MyDBHandler(SignUp.this);
@@ -80,13 +111,14 @@ public class SignUp extends AppCompatActivity {
                     else{
                         // Attempt to pass the new user values to a new UserInfo class
                         try {
-                            userInfo = new UserInfo(-1, userName, password, eMail);
+                            userInfo = new UserInfo(-1, userName, password, eMail, firstName, lastName, address, phone);
                             Toast.makeText(getApplicationContext(), "Account Successfully Created ", Toast.LENGTH_LONG).show();
                             startActivity(new Intent(SignUp.this, Home.class));     //take user to homeUI
                         }
                         catch (Exception e) {
                             Toast.makeText(getApplicationContext(), "User Account could not be created", Toast.LENGTH_LONG).show();
-                            userInfo = new UserInfo(-1, "error-username", "error-password", "error-email");
+                            userInfo = new UserInfo(-1, "error-username", "error-password", "error-email",
+                                    "error-firstName", "error-lastName", "error-phone", "error-address");
                         }
                         // call the database method addRow() and add new user
                         myDBHandler.addRow(userInfo);
