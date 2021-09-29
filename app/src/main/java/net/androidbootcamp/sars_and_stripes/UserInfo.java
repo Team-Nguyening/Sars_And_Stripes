@@ -9,24 +9,12 @@ public class UserInfo {
     private String lastName;
     private String phoneNumber;
     private String address;
-<<<<<<< HEAD
-    Profile profile =  new Profile();
-
-    //constructors
-    public UserInfo(int userId, String userName, String passWord, String email, String firstName, String lastName,
-                    String phoneNumber, String address) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.address = address;
-=======
     //Profile profile =  new Profile();
 
     //constructors
     public UserInfo(int userId, String userName, String passWord, String firstName, String lastName,
-                     String address, String phoneNumber, String email) {
+                    String address, String phoneNumber, String email) {
         this.userId = userId;
->>>>>>> 3f717fa7cf3ddf7bc49bbd154a89890130d2a218
         this.userName = userName;
         this.passWord = passWord;
         this.firstName = firstName;
@@ -34,11 +22,6 @@ public class UserInfo {
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
-<<<<<<< HEAD
-        this.userId = userId;
-
-=======
->>>>>>> 3f717fa7cf3ddf7bc49bbd154a89890130d2a218
 
     }
     public UserInfo() {}
@@ -55,11 +38,6 @@ public class UserInfo {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
-                ", firstName='" +firstName + '\'' +
-                ", lastName='" +lastName + '\'' +
-                ", phoneNumber='" +phoneNumber + '\'' +
-                ", address='" +address + '\'' +
-
                 '}';
     }
 
@@ -76,8 +54,6 @@ public class UserInfo {
 
     }
     public String getUserName() {
-
-        profile.getProfileUsername(userName);
         return this.userName;
     }
 
@@ -123,9 +99,4 @@ public class UserInfo {
         return this.address;
     }
 
-<<<<<<< HEAD
-
 }
-=======
-}
->>>>>>> 3f717fa7cf3ddf7bc49bbd154a89890130d2a218

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sars_And_Stripes">
         <activity
+            android:name=".changePassword"
+            android:exported="true" />
+        <activity
             android:name=".Enter_Symptoms"
             android:exported="true" />
         <!--
