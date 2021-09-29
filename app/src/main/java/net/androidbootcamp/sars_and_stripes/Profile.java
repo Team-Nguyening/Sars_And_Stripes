@@ -1,7 +1,9 @@
 package net.androidbootcamp.sars_and_stripes;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -31,8 +33,7 @@ public class Profile extends AppCompatActivity {
         addressProfile = findViewById(R.id.addressProfile);
         phoneProfile = findViewById(R.id.phoneProfile);
         emailProfile = findViewById(R.id.emailProfile);
-        //buttonChangePassword = (Button) findViewById(R.id.buttonChangePassword);  <<---- DELETE
-        //buttonDelete = (Button) findViewById(R.id.buttonDelete);                  <<---- DELETE
+
 
         //USING A TRY CATCH HERE TO VERIFY THE DISPLAY DATA UPDATES WITHOUT BREAKING THE APP
         try{
@@ -56,11 +57,39 @@ public class Profile extends AppCompatActivity {
             }
         }); //END OF CHANGE PASSWORD ONCLICK
 
+        // --------------- DELETE PROFILE ---------------------------------------------------
         buttonDelete = findViewById(R.id.buttonDelete);
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //work on delet3e function within database and here!!!
+                //POP-UP WITH DELETE PROFILE CONFIRMATION BOX
+                AlertDialog.Builder builder = new AlertDialog.Builder(Profile.this);
 
+                builder.setTitle("Confirm Account Deletion");
+                builder.setMessage("Are you sure?");
+
+                //IF USER SAYS 'YES' -- CLOSE THE DIALOGUE AND DELETE PROFILE FROM DATABASE
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        // close the dialog & delete profile
+                        dialog.dismiss();   //close the dialogue box
+                        myDBHandler.deleteProfile(mUserName);   //call query method to delete the user account
+                        startActivity(new Intent(Profile.this, MainActivity.class));    //take user to sign-in page to re-create new account
+                        Toast.makeText(getApplicationContext(), "Your account was successfully deleted", Toast.LENGTH_LONG).show(); //toast message notifying user account successfully deleted
+                    }
+                });
+                //IF USER SAYS 'NO' -- DO NOTHING
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        // Do nothing
+                        dialog.dismiss();
+                    }
+                });
+
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         }); //END OF DELETE BUTTON ONCLICK
 

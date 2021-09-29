@@ -173,7 +173,11 @@ public class MyDBHandler extends SQLiteOpenHelper {
     }
 
     //DELETE USER PROFILE FROM DATABASE ------ BELOW THIS LINE ------
-
+    public void deleteProfile(String userName){
+        SQLiteDatabase db = this.getReadableDatabase();
+        String mQuery ="DELETE FROM " + USERINFO_TABLE + " WHERE " + COLUMN_USER_NAME
+                + " = " + "'" + userName + "'";
+    }
 
     //UPDATE USER PASSWORD WITHIN DATABASE ------ BELOW THIS LINE ------
 
