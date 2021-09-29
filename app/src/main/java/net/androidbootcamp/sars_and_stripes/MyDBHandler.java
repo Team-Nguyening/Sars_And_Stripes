@@ -24,13 +24,12 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
     public static final String USERINFO_TABLE = "USERINFO_TABLE";
     public static final String COLUMN_ID = "ID";
-<<<<<<< HEAD
+
     public static final String COLUMN_FIRST_NAME = "FIRST_NAME";
     public static final String COLUMN_LAST_NAME = "LAST_NAME";
     public static final String COLUMN_PHONE_NUMBER = "PHONE_NUMBER";
     public static final String COLUMN_ADDRESS = "ADDRESS";
-=======
->>>>>>> 3f717fa7cf3ddf7bc49bbd154a89890130d2a218
+
     public static final String COLUMN_USER_NAME = "USER_NAME";
     public static final String COLUMN_USER_PASSWORD = "USER_PASSWORD";
     public static final String COLUMN_FIRST_NAME = "FIRST_NAME";
@@ -38,10 +37,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_ADDRESS = "ADDRESS";
     public static final String COLUMN_PHONE_NUMBER = "PHONE_NUMBER";
     public static final String COLUMN_USER_EMAIL = "USER_EMAIL";
-<<<<<<< HEAD
 
-=======
->>>>>>> 3f717fa7cf3ddf7bc49bbd154a89890130d2a218
 
     // constructor
     public MyDBHandler(@Nullable Context context)
@@ -55,12 +51,12 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db)
     {
         String createTableStatement = "CREATE TABLE " + USERINFO_TABLE +
-<<<<<<< HEAD
+
                 "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_PASSWORD + " TEXT, " + COLUMN_USER_EMAIL + " TEXT, "
         + COLUMN_FIRST_NAME + " TEXT, " + COLUMN_LAST_NAME + " TEXT, " + COLUMN_PHONE_NUMBER + " TEXT, " + COLUMN_ADDRESS + " TEXT)";
-=======
+
                 "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_PASSWORD + " TEXT, " + COLUMN_FIRST_NAME + " TEXT, " + COLUMN_LAST_NAME + " TEXT, " + COLUMN_ADDRESS + " TEXT, " + COLUMN_PHONE_NUMBER + " TEXT, " + COLUMN_USER_EMAIL + " TEXT)";
->>>>>>> 3f717fa7cf3ddf7bc49bbd154a89890130d2a218
+
         //_db.execSQL(LoginDataBaseAdapter.DATABASE_CREATE);
         db.execSQL(createTableStatement);
 
