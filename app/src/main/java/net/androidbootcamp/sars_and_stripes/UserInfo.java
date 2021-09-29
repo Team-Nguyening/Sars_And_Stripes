@@ -9,6 +9,7 @@ public class UserInfo {
     private String lastName;
     private String phoneNumber;
     private String address;
+<<<<<<< HEAD
     Profile profile =  new Profile();
 
     //constructors
@@ -18,11 +19,26 @@ public class UserInfo {
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.address = address;
+=======
+    //Profile profile =  new Profile();
+
+    //constructors
+    public UserInfo(int userId, String userName, String passWord, String firstName, String lastName,
+                     String address, String phoneNumber, String email) {
+        this.userId = userId;
+>>>>>>> 3f717fa7cf3ddf7bc49bbd154a89890130d2a218
         this.userName = userName;
         this.passWord = passWord;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
         this.email = email;
+<<<<<<< HEAD
         this.userId = userId;
 
+=======
+>>>>>>> 3f717fa7cf3ddf7bc49bbd154a89890130d2a218
 
     }
     public UserInfo() {}
@@ -34,6 +50,10 @@ public class UserInfo {
                 "userId=" + userId +
                 ", userName='" + userName + '\'' +
                 ", passWord='" + passWord + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", firstName='" +firstName + '\'' +
                 ", lastName='" +lastName + '\'' +
@@ -103,5 +123,9 @@ public class UserInfo {
         return this.address;
     }
 
+<<<<<<< HEAD
 
 }
+=======
+}
+>>>>>>> 3f717fa7cf3ddf7bc49bbd154a89890130d2a218
