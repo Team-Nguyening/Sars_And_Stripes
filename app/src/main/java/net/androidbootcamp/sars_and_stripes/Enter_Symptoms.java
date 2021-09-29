@@ -33,29 +33,26 @@ public class Enter_Symptoms extends AppCompatActivity {
             Check_Results.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-
-                        if (cb1.isChecked() && cb2.isChecked() && cb3.isChecked()) {
-                            startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
-                        } else if (cb3.isChecked() && cb4.isChecked() && cb5.isChecked()) {
-                            startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
-                        } else if (cb5.isChecked() && cb6.isChecked() && cb7.isChecked()) {
-                            startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
-                        } else if (cb1.isChecked() && cb3.isChecked() && cb4.isChecked()) {
-                            startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
-                        } else if (cb1.isChecked() && cb5.isChecked() && cb6.isChecked()) {
-                            startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
-                        } else if (cb2.isChecked() && cb5.isChecked() && cb6.isChecked()) {
-                            startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
-                        } else if (cb2.isChecked() && cb1.isChecked() && cb7.isChecked()) {
-                            startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
-                        } else if (cb3.isChecked() && cb5.isChecked() && cb7.isChecked()) {
-                            startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
-                        } else {
-                            Toast.makeText(getApplicationContext(), "You should be ok. Please consult with your physician if symptoms worsen.", Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(Enter_Symptoms.this, Home.class));
-                        }
-
+                    if (cb1.isChecked() && cb2.isChecked() && cb3.isChecked()) {
+                        startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
+                    } else if (cb3.isChecked() && cb4.isChecked() && cb5.isChecked()) {
+                        startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
+                    } else if (cb5.isChecked() && cb6.isChecked() && cb7.isChecked()) {
+                        startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
+                    } else if (cb1.isChecked() && cb3.isChecked() && cb4.isChecked()) {
+                        startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
+                    } else if (cb1.isChecked() && cb5.isChecked() && cb6.isChecked()) {
+                        startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
+                    } else if (cb2.isChecked() && cb5.isChecked() && cb6.isChecked()) {
+                        startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
+                    } else if (cb2.isChecked() && cb1.isChecked() && cb7.isChecked()) {
+                        startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
+                    } else if (cb3.isChecked() && cb5.isChecked() && cb7.isChecked()) {
+                        startActivity(new Intent(Enter_Symptoms.this, Book_Appointment.class));
+                    } else {
+                        Toast.makeText(getApplicationContext(), "You should be ok. Please consult with your physician if symptoms worsen.", Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(Enter_Symptoms.this, Home.class));
+                    }
                 }
             });
     }

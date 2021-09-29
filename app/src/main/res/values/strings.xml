@@ -85,6 +85,13 @@
     <string name="covid_symptoms15">Do you have a fever?</string>
     <string name="Check_results">Check My Results</string>
 
-
+    <string name="userNameLabel">Username: </string>
+    <string name="firstNameLabel">First Name: </string>
+    <string name="lastNameLabel">Last Name: </string>
+    <string name="emailLabel">Email: </string>
+    <string name="phoneNumberLabel">Phone Number: </string>
+    <string name="addressLabel">Address: </string>
+    <string name="btnChangePassword">Change Password</string>
+    <string name="btnDeleteProfile">Delete Profile</string>
 
 </resources>
