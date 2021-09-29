@@ -83,6 +83,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
                 android:contentDescription="@string/btnBegin"
+                android:onClick="enter_symptoms"
                 app:srcCompat="@drawable/begin_exam_button"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
         </LinearLayout>

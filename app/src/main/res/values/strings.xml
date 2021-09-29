@@ -77,6 +77,23 @@
     <string name="btnChangePassword">Change Password</string>
     <string name="btnDeleteProfile">Delete Profile</string>
 
+    <string name="covid_symptoms">Have you received a Covid-19 vaccine?</string>
+    <string name="covid_symptoms2">Do you have a cough?</string>
+    <string name="covid_symptoms3">Are you having shortness of breath or any difficulty breathing?</string>
+    <string name="covid_symptoms4">Do you have chills or repeated shaking with chills?</string>
+    <string name="covid_symptoms5">Do you have any muscle pain or body aches?</string>
+    <string name="covid_symptoms6">Do you have any recent onset of headache or sore throat?</string>
+    <string name="covid_symptoms7">Have you been experiencing nausea and/or vomiting?</string>
+    <string name="covid_symptoms8">Do you have any recent loss of taste or smell?</string>
+    <string name="covid_symptoms9">Have you been experiencing fatigue recently?</string>
+    <string name="covid_symptoms10">Have you experienced any recent GI upset or diarrhea?</string>
+    <string name="covid_symptoms11">Have you been advised to self-quarantine because of exposure to someone with Covid-19?</string>
+    <string name="covid_symptoms12">Have you traveled in the past 14 days to any regions affected by Covid-19?</string>
+    <string name="covid_symptoms13">Have you been tested for Covid-19? If yes, what was the result?</string>
+    <string name="covid_symptoms14">Have you been diagnosed with Covid-19? If yes, when?</string>
+    <string name="covid_symptoms15">Do you have a fever?</string>
+    <string name="Check_results">Check My Results</string>
+
 
 
 </resources>
