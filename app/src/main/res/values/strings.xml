@@ -23,7 +23,8 @@
     <string name="lastNameHint">Enter Last Name Here</string>
     <string name="addressHint">Enter Address Here</string>
     <string name="phoneHint">Enter Phone Number Here</string>
-
+    <string name="changePassword">Change Password</string>
+    <string name="btnSaveNewPassword">Confirm New Password</string>
 
 
 

@@ -174,15 +174,20 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
     //DELETE USER PROFILE FROM DATABASE ------ BELOW THIS LINE ------
     public void deleteProfile(String userName){
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = this.getWritableDatabase();
         String mQuery ="DELETE FROM " + USERINFO_TABLE + " WHERE " + COLUMN_USER_NAME
                 + " = " + "'" + userName + "'";
+        Cursor cursor = db.rawQuery(mQuery, null);
+        cursor.moveToFirst();
     }
 
     //UPDATE USER PASSWORD WITHIN DATABASE ------ BELOW THIS LINE ------
-
-
-
-
+    public void updatePassword(String userName, String newPassword){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String mQuery ="UPDATE " + USERINFO_TABLE + " SET " + COLUMN_USER_PASSWORD + " = " + "'" + newPassword + "'" + " WHERE " + COLUMN_USER_NAME
+                + " = " + "'" + userName + "'";
+        Cursor cursor = db.rawQuery(mQuery, null);
+        cursor.moveToFirst();
+    }
 
 }

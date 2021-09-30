@@ -53,7 +53,7 @@ public class Profile extends AppCompatActivity {
         buttonChangePassword.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //need to create the change password page
-
+                startActivity(new Intent(Profile.this, changePassword.class));    //take user to sign-in page to re-create new account
             }
         }); //END OF CHANGE PASSWORD ONCLICK
 
